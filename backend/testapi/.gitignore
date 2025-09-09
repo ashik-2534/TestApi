@@ -1,0 +1,51 @@
+testenv\ 
+# Byte-compiled / optimized / compiled files
+*.pyc
+__pycache__/
+
+# Logs
+*.log
+
+# Database
+db.sqlite3
+
+# Virtual Environment
+.env/
+.env
+venv/
+env/
+
+# Media files
+media/
+
+# Static files (if collected locally for development, otherwise might be managed differently in production)
+static/
+
+# Django-specific settings
+local_settings.py
+
+# PyCharm / IDE-specific files
+.idea/
+*.iml
+.vscode/
+
+# Operating System files
+.DS_Store
+Thumbs.db
+
+# Test coverage reports
+htmlcov/
+.coverage
+.tox/
+.eggs/
+
+# Translations
+*.mo
+*.pot
+
+# Other common temporary or build artifacts
+*.manifest
+*.spec
+pip-log.txt
+pip-delete-this-directory.txt
+.ipynb_checkpoints/
