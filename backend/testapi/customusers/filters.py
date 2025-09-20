@@ -1,5 +1,5 @@
 import django_filters
-from .models import Post, User
+from .models import User
 
 class UserFilter(django_filters.FilterSet):
     """Advanced filtering for users"""
