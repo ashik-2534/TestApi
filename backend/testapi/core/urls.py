@@ -23,7 +23,7 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     # Admin interface
-    path('admin/', admin.site.urls),
+    path('config/', admin.site.urls),
     
     # API endpoints
     path('users/', include('customusers.urls')),
