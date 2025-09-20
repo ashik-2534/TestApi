@@ -1,6 +1,6 @@
 testenv\ 
 
-tests.py
+
 # Byte-compiled / optimized / compiled files
 *.pyc
 __pycache__/
@@ -40,6 +40,7 @@ htmlcov/
 .coverage
 .tox/
 .eggs/
+
 
 # Translations
 *.mo
