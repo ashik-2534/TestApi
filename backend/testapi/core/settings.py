@@ -46,8 +46,6 @@ THIRD_PARTY_APPS = [
     'rest_framework',
     'drf_yasg',
     'rest_framework_simplejwt',
-    'drf_yasg',
-    'corsheaders',
 ]
 
 CUSTOM_APPS = [
@@ -96,9 +94,9 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('DB_NAME', 'apihub'),
-        'USER': os.getenv('DB_USER', 'apihub'),
-        'PASSWORD': os.getenv('DB_PASSWORD', 'secret'),
+        'NAME': os.getenv('DB_NAME', 'apidb'),
+        'USER': os.getenv('DB_USER', 'postgres'),
+        'PASSWORD': os.getenv('DB_PASSWORD', 'password'),
         'HOST': os.getenv('DB_HOST', 'localhost'),
         'PORT': os.getenv('DB_PORT', '5432'),    
     }

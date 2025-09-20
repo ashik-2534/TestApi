@@ -16,7 +16,6 @@ class User (AbstractUser):
     updated_at = models.DateTimeField(auto_now=True)
     
     class Meta:
-        db_name = "auth_user"
         verbose_name = "User"
         verbose_name_plural = "Users"
         
