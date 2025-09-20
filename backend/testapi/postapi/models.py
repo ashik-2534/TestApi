@@ -23,7 +23,7 @@ class Post(models.Model):
     excerpt = models.CharField(
         max_length=300, blank=True, help_text="Short description of the post"
     )
-    featurd_image = models.URLField(blank=True, help_text="Featured image url")
+    featured_image = models.URLField(blank=True, help_text="Featured image url")
     is_published = models.BooleanField(default=True , help_text="Wheater this post is publicly visible ")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

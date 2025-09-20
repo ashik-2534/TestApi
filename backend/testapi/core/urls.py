@@ -1,4 +1,4 @@
-# apihub/urls.py
+
 from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
@@ -26,8 +26,8 @@ urlpatterns = [
     path('config/', admin.site.urls),
     
     # API endpoints
-    path('users/', include('customusers.urls')),
-    path('posts/', include('postapi.urls')),
+    path('api/users/', include('customusers.urls')),
+    path('api/posts/', include('postapi.urls')),
     
     # API Documentation
     path('swagger<format>/', schema_view.without_ui(cache_timeout=0), name='schema-json'),
@@ -35,7 +35,7 @@ urlpatterns = [
     path('redoc/', schema_view.with_ui('redoc', cache_timeout=0), name='schema-redoc'),
     
     # API root endpoint
-    path('', schema_view.with_ui('swagger', cache_timeout=0), name='api-root'),
+    path('api/', schema_view.with_ui('swagger', cache_timeout=0), name='api-root'),
 ]
 
 # Serve media files during development
