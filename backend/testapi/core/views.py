@@ -3,10 +3,10 @@ from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from django.http import JsonResponse
 
-
 @api_view(['GET'])
 @permission_classes([AllowAny])
 def health_check(request):
+    """Simple health check endpoint"""
     return Response({
         'status': 'healthy',
         'message': 'API Hub is running',
@@ -14,7 +14,7 @@ def health_check(request):
     })
 
 
-
+# Error Handlers
 def bad_request(request, exception=None):
     """Custom 400 error handler"""
     return JsonResponse({
