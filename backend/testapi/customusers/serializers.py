@@ -82,3 +82,36 @@ class UserUpdateSerializer(serializers.ModelSerializer):
             'bio', 
             'avatar'
         ]
+
+
+
+# Authentication Serializers
+class LoginSerializer(serializers.Serializer):
+    """
+    Serializer for user login
+    Will be used with JWT authentication
+    """
+    username = serializers.CharField()
+    password = serializers.CharField(write_only=True)
+
+
+class PasswordChangeSerializer(serializers.Serializer):
+    """
+    Serializer for changing user password
+    """
+    old_password = serializers.CharField(write_only=True)
+    new_password = serializers.CharField(write_only=True, validators=[validate_password])
+    new_password_confirm = serializers.CharField(write_only=True)
+    
+    def validate(self, attrs):
+        """Validate that new passwords match"""
+        if attrs['new_password'] != attrs['new_password_confirm']:
+            raise serializers.ValidationError("New passwords don't match")
+        return attrs
+    
+    def validate_old_password(self, value):
+        """Validate that old password is correct"""
+        user = self.context['request'].user
+        if not user.check_password(value):
+            raise serializers.ValidationError("Old password is incorrect")
+        return value
