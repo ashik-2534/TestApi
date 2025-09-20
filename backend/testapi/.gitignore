@@ -1,4 +1,6 @@
 testenv\ 
+
+tests.py
 # Byte-compiled / optimized / compiled files
 *.pyc
 __pycache__/
