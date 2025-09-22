@@ -1,33 +1,44 @@
-asgiref==3.9.1
-certifi==2025.8.3
-charset-normalizer==3.4.3
-colorama==0.4.6
-Django==4.2.24
-django-cors-headers==4.9.0
-django-debug-toolbar==6.0.0
-django-filter==25.1
-djangorestframework==3.16.1
-djangorestframework_simplejwt==5.5.1
-drf-yasg==1.21.10
-factory_boy==3.3.3
-Faker==37.8.0
-gunicorn==23.0.0
-idna==3.10
-inflection==0.5.1
-iniconfig==2.1.0
-packaging==25.0
-pillow==11.3.0
-pluggy==1.6.0
-psycopg2-binary==2.9.10
-Pygments==2.19.2
-PyJWT==2.10.1
-pytest==8.4.2
-pytest-django==4.11.1
-python-dotenv==1.1.1
-pytz==2025.2
-PyYAML==6.0.2
-requests==2.32.3
-sqlparse==0.5.3
-tzdata==2025.2
-uritemplate==4.2.0
-urllib3==2.5.0
+
+# Django and DRF Core
+django>=4.2.0,<5.0.0
+djangorestframework>=3.14.0
+djangorestframework-simplejwt>=5.3.0
+
+# Database
+psycopg2-binary>=2.9.0  # PostgreSQL adapter
+
+# API Documentation
+drf-yasg>=1.21.0
+
+# Phase 2 Security Dependencies
+django-filter>=23.2          # Advanced filtering and search
+django-cors-headers>=4.0.0   # CORS handling for frontend
+django-ratelimit>=4.0.0      # Additional rate limiting (optional)
+django-redis>=5.3.0          # Redis cache backend (optional but recommended)
+
+# Environment and Configuration
+python-dotenv>=1.0.0
+
+# Production Server
+gunicorn>=21.2.0
+whitenoise>=6.5.0  # Static file serving
+
+# Development and Testing (optional)
+django-debug-toolbar>=4.1.0  # Development debugging
+pytest-django>=4.5.0         # Testing framework
+factory-boy>=3.3.0           # Test data generation
+coverage>=7.2.0              # Code coverage
+
+# Utility packages
+Pillow>=10.0.0              # Image handling
+requests>=2.31.0            # HTTP client for testing
+python-dateutil>=2.8.0     # Date utilities
+
+# Security and Monitoring (optional but recommended)
+django-extensions>=3.2.0    # Management commands and utilities
+sentry-sdk>=1.32.0          # Error tracking (for production)
+
+# Additional security packages (optional)
+cryptography>=41.0.0        # Enhanced cryptographic functions
+bcrypt>=4.0.0              # Better password hashing
+django-axes>=6.0.0         # Failed login attempt blocking
