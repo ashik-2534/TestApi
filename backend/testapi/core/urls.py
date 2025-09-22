@@ -26,8 +26,8 @@ urlpatterns = [
     path('config/', admin.site.urls),
     
     # API endpoints
-    path('api/users/', include('customusers.urls')),
-    path('api/posts/', include('postapi.urls')),
+    path('users/', include('customusers.urls')),
+    path('posts/', include('postapi.urls')),
     
     # API Documentation
     path('swagger<format>/', schema_view.without_ui(cache_timeout=0), name='schema-json'),
