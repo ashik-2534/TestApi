@@ -23,6 +23,12 @@ urlpatterns = [
     path('auth/verify/', authentication.verify_token, name='auth-verify'),
     path('auth/refresh/', authentication.refresh_token, name='auth-refresh'),
     
+    
+    #New security endpoints
+    path('auth/password-reset/', authentication.request_password_reset, name='auth-password-reset'),
+    path('auth/security-status/', authentication.security_status, name='auth-security-status'),
+    
+    
     # JWT Token endpoints (alternative URLs for compatibility)
     path('token/', authentication.CustomTokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
