@@ -62,6 +62,7 @@ INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + CUSTOM_APPS
 #  Middleware configuration with security enhancements
 MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware', #at the top
+    'core.middleware.MaintenanceMiddleware', 
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
