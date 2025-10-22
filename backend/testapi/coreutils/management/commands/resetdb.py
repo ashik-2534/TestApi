@@ -2,14 +2,15 @@
 Management command to reset the database
 Usage: python manage.py resetdb [--no-seed]
 """
+
 from django.core.management import call_command
 from django.core.management.base import BaseCommand
 from django.conf import settings
-import os
+import os , tempfile
 import shutil
 import time
 
-LOCK_FILE = '/tmp/reset_in_progress'
+LOCK_FILE = os.path.join(tempfile.gettempdir(), 'reset_in_progress')
 
 
 class Command(BaseCommand):
