@@ -1,1 +1,0 @@
-"""Custom Django management commands"""

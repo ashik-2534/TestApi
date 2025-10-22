@@ -53,7 +53,8 @@ THIRD_PARTY_APPS = [
 
 CUSTOM_APPS = [
     'postapi',
-    'customusers'
+    'customusers',
+    'coreutils',
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + CUSTOM_APPS
